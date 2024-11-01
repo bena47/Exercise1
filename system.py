@@ -242,3 +242,13 @@ def main():
     ems.add_employee(jane)
     ems.add_employee(bob)
     ems.add_employee(alice)
+
+    while True:
+        print("\n--- Employee Management System ---")
+        print("1. Display all employees")
+        print("2. Add new employee")
+        print("3. Remove employee")
+        print("4. Transfer employee")
+        print("5. Assign task (Manager only)")
+        print("6. Perform code review (Developer only)")
+        print("7. Exit")
