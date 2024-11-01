@@ -15,3 +15,7 @@ class Department:
 
         def get_employees(self):
             return self.__employees  
+class Role(ABC):
+    @abstractmethod
+    def get_responsibilities(self):
+        pass
