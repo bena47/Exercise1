@@ -60,3 +60,10 @@ class Manager(Employee):
 
     def assign_task(self, employee, task):
         print(f"{self.get_name()} assigned '{task}' to {employee.get_name()}")     
+
+class Developer(Employee):
+    def __init__(self, name, employee_id, department):
+        super().__init__(name, employee_id, department, DeveloperRole())
+
+    def code_review(self, code):
+        print(f"{self.get_name()} is reviewing code: {code}")        
