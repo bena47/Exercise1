@@ -271,3 +271,11 @@ def main():
 
             ems.add_employee(new_employee)
             print("Employee added successfully!")
+        elif choice == '3':
+            emp_id = input("Enter employee ID to remove: ")
+            employee = ems.get_employee_by_id(emp_id)
+            if employee:
+                ems.remove_employee(employee)
+                print("Employee removed successfully!")
+            else:
+                print("Employee not found!")
