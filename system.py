@@ -19,3 +19,7 @@ class Role(ABC):
     @abstractmethod
     def get_responsibilities(self):
         pass
+
+class ManagerRole(Role):
+    def get_responsibilities(self):
+        return "Oversee team, assign tasks, report to upper management"    
