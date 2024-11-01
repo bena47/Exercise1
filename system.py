@@ -221,3 +221,6 @@ class EmployeeManagementSystem:
         new_department.add_employee(employee)
         employee.set_department(new_department)
     
+ # main program
+def main():
+    ems = EmployeeManagementSystem()    
