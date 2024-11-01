@@ -257,3 +257,17 @@ def main():
 
         if choice == '1':
             ems.display_all_employees()
+            elif choice == '2':
+            name = input("Enter employee name: ")
+            emp_id = input("Enter employee ID: ")
+            dept_name = input("Enter department name (IT/HR): ")
+            role = input("Enter role (Manager/Developer): ")
+
+            department = it_department if dept_name.upper() == "IT" else hr_department
+            if role.lower() == "manager":
+                new_employee = Manager(name, emp_id, department)
+            else:
+                new_employee = Developer(name, emp_id, department)
+
+            ems.add_employee(new_employee)
+            print("Employee added successfully!")
