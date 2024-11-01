@@ -236,3 +236,9 @@ def main():
     jane = Developer("Jane Smith", "D001", it_department)
     bob = Developer("Bob Johnson", "D002", it_department)
     alice = Manager("Alice Brown", "M002", hr_department)
+
+    # add employees to the system
+    ems.add_employee(john)
+    ems.add_employee(jane)
+    ems.add_employee(bob)
+    ems.add_employee(alice)
