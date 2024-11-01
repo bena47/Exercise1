@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+
 class Department:
       def __init__(self, name):
         self.__name = name
@@ -15,6 +16,7 @@ class Department:
 
         def get_employees(self):
             return self.__employees  
+        
 class Role(ABC):
     @abstractmethod
     def get_responsibilities(self):
@@ -30,3 +32,31 @@ class Employee:
         self.__employee_id = employee_id
         self.__department = department
         self.__role = role    
+
+    def get_name(self):
+        return self.__name
+
+    def get_employee_id(self):
+        return self.__employee_id
+
+    def get_department(self):
+        return self.__department
+
+    def set_department(self, department):
+        self.__department = department
+
+    def get_role(self):
+        return self.__role
+
+    def set_role(self, role):
+        self.__role = role
+
+    def display_info(self):
+        return f"Name: {self.__name}, ID: {self.__employee_id}, Department: {self.__department.get_name()}, Role: {type(self.__role).__name__}" 
+      
+class Manager(Employee):
+    def __init__(self, name, employee_id, department):
+        super().__init__(name, employee_id, department, ManagerRole())
+
+    def assign_task(self, employee, task):
+        print(f"{self.get_name()} assigned '{task}' to {employee.get_name()}")     
