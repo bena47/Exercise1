@@ -235,3 +235,4 @@ def main():
     john = Manager("John Doe", "M001", it_department)
     jane = Developer("Jane Smith", "D001", it_department)
     bob = Developer("Bob Johnson", "D002", it_department)
+    alice = Manager("Alice Brown", "M002", hr_department)
