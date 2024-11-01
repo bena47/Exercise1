@@ -23,3 +23,10 @@ class Role(ABC):
 class ManagerRole(Role):
     def get_responsibilities(self):
         return "Oversee team, assign tasks, report to upper management"    
+    
+class Employee:
+    def __init__(self, name, employee_id, department, role):
+        self.__name = name
+        self.__employee_id = employee_id
+        self.__department = department
+        self.__role = role    
