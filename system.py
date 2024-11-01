@@ -307,3 +307,10 @@ def main():
                 developer.code_review(code)
             else:
                 print("Invalid developer ID!")
+        elif choice == '7':
+            print("Exiting the program. Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+if __name__ == "__main__":
+    main()
