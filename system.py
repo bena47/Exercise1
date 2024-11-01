@@ -230,3 +230,8 @@ def main():
     hr_department = Department("HR")
     ems.add_department(it_department)
     ems.add_department(hr_department)
+
+    # Create employees
+    john = Manager("John Doe", "M001", it_department)
+    jane = Developer("Jane Smith", "D001", it_department)
+    bob = Developer("Bob Johnson", "D002", it_department)
