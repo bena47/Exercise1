@@ -252,3 +252,8 @@ def main():
         print("5. Assign task (Manager only)")
         print("6. Perform code review (Developer only)")
         print("7. Exit")
+
+        choice = input("Enter your choice (1-7): ")
+
+        if choice == '1':
+            ems.display_all_employees()
