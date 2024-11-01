@@ -279,3 +279,13 @@ def main():
                 print("Employee removed successfully!")
             else:
                 print("Employee not found!")
+        elif choice == '4':
+            emp_id = input("Enter employee ID to transfer: ")
+            new_dept = input("Enter new department name (IT/HR): ")
+            employee = ems.get_employee_by_id(emp_id)
+            if employee:
+                new_department = it_department if new_dept.upper() == "IT" else hr_department
+                ems.transfer_employee(employee, new_department)
+                print("Employee transferred successfully!")
+            else:
+                print("Employee not found!")
