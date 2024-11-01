@@ -299,3 +299,11 @@ def main():
                 manager.assign_task(employee, task)
             else:
                 print("Invalid manager or employee ID!")
+        elif choice == '6':
+            dev_id = input("Enter developer ID: ")
+            code = input("Enter code to review: ")
+            developer = ems.get_employee_by_id(dev_id)
+            if isinstance(developer, Developer):
+                developer.code_review(code)
+            else:
+                print("Invalid developer ID!")
