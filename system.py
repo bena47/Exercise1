@@ -67,3 +67,8 @@ class Developer(Employee):
 
     def code_review(self, code):
         print(f"{self.get_name()} is reviewing code: {code}")        
+
+class EmployeeManagementSystem:
+    def __init__(self):
+        self.__employees = []
+        self.__departments = []        
