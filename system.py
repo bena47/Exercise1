@@ -223,4 +223,10 @@ class EmployeeManagementSystem:
     
  # main program
 def main():
-    ems = EmployeeManagementSystem()    
+    ems = EmployeeManagementSystem()  
+    
+    # Creates departments  
+    it_department = Department("IT")
+    hr_department = Department("HR")
+    ems.add_department(it_department)
+    ems.add_department(hr_department)
