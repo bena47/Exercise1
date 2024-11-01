@@ -289,3 +289,13 @@ def main():
                 print("Employee transferred successfully!")
             else:
                 print("Employee not found!")
+        elif choice == '5':
+            manager_id = input("Enter manager ID: ")
+            employee_id = input("Enter employee ID to assign task: ")
+            task = input("Enter task description: ")
+            manager = ems.get_employee_by_id(manager_id)
+            employee = ems.get_employee_by_id(employee_id)
+            if isinstance(manager, Manager) and employee:
+                manager.assign_task(employee, task)
+            else:
+                print("Invalid manager or employee ID!")
